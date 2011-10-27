@@ -14,7 +14,7 @@ public class Main {
 		// TODO Auto-generated method stub
 
 		Asteroid a = new Asteroid();
-		a.position.setX(10);
+		//a.position.setX(10);
 		
 		Point p = new Point();
 	}

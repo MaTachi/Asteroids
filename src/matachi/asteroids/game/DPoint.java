@@ -105,6 +105,16 @@ public class DPoint {
 	}
 
 	/**
+	 * Move the coordinate with amount given in the DPoint.
+	 * To clarify: This method doesn't move the point to the specified
+	 * coordinate, but instead adds to the already exisiting location.
+	 * @param p add x and y from DPoint p
+	 */
+	public void move(DPoint p) {
+		move(p.x, p.y);
+	}
+
+	/**
 	 * Returns the distance to another (X,Y) coordinate.
 	 * @param x the x coordinate
 	 * @param y the y coordiante

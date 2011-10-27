@@ -1,16 +1,48 @@
 package matachi.asteroids.game;
 
-import java.awt.Point;
 
-public class Asteroid /*implements IMoveable*/ {
+public class Asteroid implements IUpdateable {
 
-	public DPoint position;
-	DPoint velocity;
-	DPoint acceleration;
+	// These variables are set to protected, so Asteroid won't have to manage
+	// them directly.
+	protected DPoint position;
+	protected DPoint velocity;
+	protected DPoint acceleration;
 	
+	/**
+	 * Constructs an asteroid with position, velocity and acceleration set to
+	 * zero.
+	 */
 	public Asteroid() {
-		position = new DPoint(10,10);
+		position = new DPoint();
+		velocity = new DPoint();
+		acceleration = new DPoint();
 	}
+
+	/**
+	 * Update the asteroid
+	 */
+	@Override
+	public void update() {
+		/*
+		 * Update the velocity and the position of the asteroid.
+		 */
+		velocity.move(acceleration);
+		position.move(velocity);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	/*
 	@Override
 	public DoublePoint getPosition() {
