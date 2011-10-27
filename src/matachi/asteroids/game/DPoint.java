@@ -6,6 +6,7 @@ package matachi.asteroids.game;
  * There is a Java class called Point, but it uses ints, which is more accurate
  * but not as "flexible". This class allows for smaller and smoothers movements.
  * 
+ * 
  * @author Daniel "MaTachi" Jonsson
  * @version 1.0
  * @since 1.0
