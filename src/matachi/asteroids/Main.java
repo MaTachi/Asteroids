@@ -1,22 +1,33 @@
 package matachi.asteroids;
 
-import java.awt.Point;
+import matachi.asteroids.game.GameController;
+import matachi.asteroids.game.GameView;
 
-import matachi.asteroids.game.Asteroid;
+import org.newdawn.slick.AppGameContainer;
+import org.newdawn.slick.SlickException;
 
-
+/**
+ * The Main class that starts up the game by invoking the AppGameContainer with
+ * the gameController.
+ * 
+ * @author Daniel "MaTachi" Jonsson
+ * @version 1.0
+ * @since 0.1
+ *
+ */
 public class Main {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-		Asteroid a = new Asteroid();
-		//a.position.setX(10);
-		
-		Point p = new Point();
+		try {
+			GameController gameController = new GameController("Asteroids");
+			AppGameContainer app = new AppGameContainer(gameController);
+			app.setDisplayMode(800, 800, false);
+			app.start();
+		} catch (SlickException e) {
+			e.printStackTrace();
+		}
 	}
-
 }

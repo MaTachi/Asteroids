@@ -14,5 +14,5 @@ public interface IUpdateable {
 	/**
 	 * Update the object.
 	 */
-	public void update();
+	public void move();
 }
