@@ -82,7 +82,7 @@ public class GameController extends BasicGame {
 	 */
 	@Override
 	public void render(GameContainer gc, Graphics g) throws SlickException {
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < gameModel.getAsteroids().size(); i++) {
 			asteroidSprite.draw(gameModel.getAsteroids().get(i).position.x
 					* this.scaleX, gameModel.getAsteroids().get(i).position.y
 					* this.scaleY);
